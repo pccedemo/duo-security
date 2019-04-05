@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@318147158:1550857292446" name="Fraud" version="6.0.1">
+<element height="46" id="Element@2012487123:1550857292446" name="Fraud" type="Page Entry" width="82" x="111" y="50">
+<exit_states>
+<exit_state name="next" target="Element@675683103:1550857308540"/>
+</exit_states>
+</element>
+<element height="46" id="Element@675683103:1550857308540" name="send sms" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="143" x="76" y="179">
+<exit_states>
+<exit_state name="done" target="Element@312386785:1550857308540"/>
+<exit_state name="Java Exception-any" target="Element@176568697:1550857334352">
+<bendpoint>
+<dim1 x="156" y="157"/>
+<dim2 x="191" y="-106"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@312386785:1550857308540" name="register phone in answers database" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="234" x="41" y="318">
+<exit_states>
+<exit_state name="done" target="Element@176568697:1550857334352"/>
+<exit_state name="Java Exception-any" target="Element@176568697:1550857334352">
+<bendpoint>
+<dim1 x="75" y="118"/>
+<dim2 x="-215" y="70"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@176568697:1550857334352" name="Busted" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="86" x="405" y="366">
+<exit_states>
+<exit_state name="done" target="Element@966671648:1550857401383"/>
+</exit_states>
+</element>
+<element height="46" id="Element@966671648:1550857401383" name="return fraud" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="113" x="391" y="458">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="90" id="Element@1655997217:1550857515774" type="Comment" width="318" x="284" y="85">
+<comment><![CDATA[When a fraudulent deny message is returned from 
+Duo 2FA, send an SMS follow up message to the 
+customer's registered SMS number (session var)
+and then play a message to the hax0r. we also register 
+the SMS number in answers database on mm to assist
+routing SMS replies from the customer back to this instance.]]></comment>
+</element>
+</page>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@516207573:1507918596186" name="Main Menu" version="6.0.1">
+<element height="50" id="Element@66745531:1507918596202" name="Main Menu" type="Page Entry" width="111" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1648395705:1548257431564"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1648395705:1548257431564" name="Main_Menu_01" src="com.audium.server.voiceElement.menu.MFoundation6OptionMenu" type="Voice Element" width="179" x="255" y="110">
+<exit_states>
+<exit_state name="option1" target="Element@580456072:1548257799688"/>
+<exit_state name="option2" target="Element@1898628347:1548257799688"/>
+<exit_state name="option3" target="Element@787117256:1548257799688"/>
+<exit_state name="option4" target="Element@1231718540:1548257799688"/>
+<exit_state name="option5" target="Element@1854477430:1548257799688"/>
+<exit_state name="option6" target="Element@1854477430:1548257799688"/>
+<exit_state name="max_nomatch" target="Element@1854477430:1548257799688"/>
+<exit_state name="max_noinput" target="Element@1854477430:1548257799688"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1854477430:1548257799688" name="Other" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="150" x="634" y="279">
+<exit_states>
+<exit_state name="done" target="Element@2065357461:1550863175861"/>
+</exit_states>
+</element>
+<element height="46" id="Element@580456072:1548257799688" name="Help Desk" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="103" x="50" y="278">
+<exit_states>
+<exit_state name="done" target="Element@2065357461:1550863175861"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1898628347:1548257799688" name="Travel" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="149" x="324" y="282">
+<exit_states>
+<exit_state name="done" target="Element@2065357461:1550863175861"/>
+</exit_states>
+</element>
+<element height="46" id="Element@787117256:1548257799688" name="Human Resources" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="146" x="164" y="279">
+<exit_states>
+<exit_state name="done" target="Element@2065357461:1550863175861"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1231718540:1548257799688" name="Reset Password" type="Page Connector" width="131" x="486" y="279">
+<page_connector target="Element@897465709:1548257809360">Reset Password<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2065357461:1550863175861" name="return from main menu" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="175" x="160" y="457">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

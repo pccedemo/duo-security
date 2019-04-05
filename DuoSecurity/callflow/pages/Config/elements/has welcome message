@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1807105843:1550863324767" name="has welcome message" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="has welcome message" default_exit_state="has message">
+        <exit_state name="no message" conjugate="and">
+            <boolean check_existence="yes" value="false">
+                <data>
+                    <element name="get vertical" variable="duoWelcomeMessage" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

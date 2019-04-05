@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@19707325:1472985306752" name="Error" version="6.0.1">
+<element height="50" id="Element@5215520:1472985306752" name="error" type="Page Entry" width="82" x="106" y="43">
+<exit_states>
+<exit_state name="next" target="Element@28550522:1472985430034"/>
+</exit_states>
+</element>
+<element height="50" id="Element@20495726:1472985336096" name="exception" type="Page Entry" width="115" x="382" y="44">
+<exit_states>
+<exit_state name="next" target="Element@27525335:1472985582518"/>
+</exit_states>
+</element>
+<element height="50" id="Element@28550522:1472985430034" name="error_message" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="146" x="79" y="135">
+<exit_states>
+<exit_state name="done" target="Element@599897326:1516828917313"/>
+</exit_states>
+</element>
+<element height="50" id="Element@27525335:1472985582518" name="exception_message" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="179" x="357" y="136">
+<exit_states>
+<exit_state name="done" target="Element@599897326:1516828917313"/>
+</exit_states>
+</element>
+<element height="50" id="Element@599897326:1516828917313" name="return error" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="110" x="244" y="254">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

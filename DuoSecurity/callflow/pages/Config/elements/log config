@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1724236493:1550863299533" name="log config" version="6.0.1">
+<config>
+<log>
+<data create_when="Before" name="sms message body">{Data.Session.smsMessage}</data>
+<data create_when="Before" name="sms number">{Data.Session.smsNumber}</data>
+<data create_when="Before" name="welcome message">{Data.Session.welcomeMessage}</data>
+</log>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

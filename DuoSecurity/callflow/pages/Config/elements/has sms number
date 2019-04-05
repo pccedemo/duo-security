@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@100295664:1550863299533" name="has sms number" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="has sms number" default_exit_state="has sms number">
+        <exit_state name="no sms number" conjugate="and">
+            <boolean check_existence="yes" value="false">
+                <data>
+                    <element name="get_user_demo_config" variable="duoFraudSmsNumber" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

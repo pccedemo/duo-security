@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1699282894:1550094605508" name="get_2fa_status" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/duo/auth</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters">'txid':'{Data.Session.txid}'</setting>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression">$.response</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<local_events>
+<local_event>
+<name>any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

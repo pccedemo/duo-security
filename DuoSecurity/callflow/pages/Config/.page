@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1372132904:1550863266892" name="Config" version="6.0.1">
+<element height="46" id="Element@1758316042:1550863266892" name="Config" type="Page Entry" width="86" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1127321419:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1127321419:1550863299533" name="get_user_demo_config" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="179" x="240" y="97">
+<exit_states>
+<exit_state name="done" target="Element@1099308575:1554501333424"/>
+<exit_state name="Java Exception-any" target="Element@2049643714:1554501000491">
+<bendpoint>
+<dim1 x="-262" y="-15"/>
+<dim2 x="-49" y="-127"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2042045600:1550863299533" name="set default sms number" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="174" x="24" y="415">
+<exit_states>
+<exit_state name="done" target="Element@1807105843:1550863324767"/>
+</exit_states>
+</element>
+<element height="46" id="Element@100295664:1550863299533" name="has sms number" type="Decision" width="137" x="259" y="419">
+<exit_states>
+<exit_state name="no sms number" target="Element@2042045600:1550863299533"/>
+<exit_state name="has sms number" target="Element@1807105843:1550863324767"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1098405233:1550863299533" name="set default sms message" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="22" y="333">
+<exit_states>
+<exit_state name="done" target="Element@100295664:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1724236493:1550863299533" name="log config" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="104" x="268" y="634">
+<exit_states>
+<exit_state name="done" target="Element@213224045:1550863639863"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1790355299:1550863299533" name="has_message" type="Decision" width="119" x="268" y="324">
+<exit_states>
+<exit_state name="no message" target="Element@1098405233:1550863299533"/>
+<exit_state name="has message" target="Element@100295664:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1241934948:1550863324767" name="set default welcome message" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="206" x="21" y="532">
+<exit_states>
+<exit_state name="done" target="Element@1724236493:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1807105843:1550863324767" name="has welcome message" type="Decision" width="168" x="256" y="540">
+<exit_states>
+<exit_state name="no message" target="Element@1241934948:1550863324767"/>
+<exit_state name="has message" target="Element@1724236493:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@213224045:1550863639863" name="Welcome" type="Page Connector" width="100" x="509" y="621">
+<page_connector target="Element@197142211:1550863644457">Welcome<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1059154535:1554500880401" name="get vertical" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="108" x="275" y="255">
+<exit_states>
+<exit_state name="done" target="Element@1790355299:1550863299533"/>
+<exit_state name="Java Exception-any" target="Element@1098405233:1550863299533"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2049643714:1554501000491" name="set default vertical" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="146" x="28" y="209">
+<exit_states>
+<exit_state name="done" target="Element@1059154535:1554500880401"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1099308575:1554501333424" name="has vertical" type="Decision" width="109" x="280" y="178">
+<exit_states>
+<exit_state name="no vertical" target="Element@2049643714:1554501000491"/>
+<exit_state name="has vertical" target="Element@1059154535:1554500880401"/>
+</exit_states>
+</element>
+</page>

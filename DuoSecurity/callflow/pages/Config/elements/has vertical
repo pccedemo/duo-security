@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1099308575:1554501333424" name="has vertical" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="has vertical" default_exit_state="has vertical">
+        <exit_state name="no vertical" conjugate="and">
+            <boolean check_existence="yes" value="false">
+                <data>
+                    <element name="get_user_demo_config" variable="vertical" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

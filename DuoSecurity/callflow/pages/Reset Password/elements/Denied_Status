@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2026134041:1548261685725" name="Denied_Status" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule default_exit_state="fraud" name="Denied_Status">
+        <exit_state conjugate="and" name="deny">
+            <string operator="equal">
+                <data>
+                    <element name="Authentication_2_factor" variable="status"/>
+                </data>
+                <constant_string value="deny"/>
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>
+]]></source>
+</config>
+</decision>

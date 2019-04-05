@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@709322258:1548257809360" name="Reset Password" version="6.0.1">
+<element height="46" id="Element@897465709:1548257809360" name="Reset Password" type="Page Entry" width="131" x="286" y="-54">
+<exit_states>
+<exit_state name="next" target="Element@1424881649:1550096265482"/>
+</exit_states>
+</element>
+<element height="46" id="Element@387258958:1548258382006" name="Failed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="140" x="368" y="464">
+<exit_states>
+<exit_state name="done" target="Element@626947300:1550857344883"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2032766383:1548258382006" name="Authorization" type="Decision" width="148" x="252" y="368">
+<exit_states>
+<exit_state name="allow" target="Element@2139939153:1548258382006"/>
+<exit_state name="deny" target="Element@2026134041:1548261685725"/>
+<exit_state name="waiting" target="Element@1043962327:1550094601138"/>
+<exit_state name="undefined" target="Element@387258958:1548258382006"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2139939153:1548258382006" name="Success" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="127" y="463">
+<exit_states>
+<exit_state name="done" target="Element@626947300:1550857344883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2048708162:1548258382006" name="Authentication_2_factor" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="176" x="270" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1835106464:1550095752952"/>
+</exit_states>
+</element>
+<element height="50" id="Element@2026134041:1548261685725" name="Denied_Status" type="Decision" width="171" x="453" y="375">
+<exit_states>
+<exit_state name="deny" target="Element@387258958:1548258382006"/>
+<exit_state name="fraud" target="Element@383072030:1550857320743"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1043962327:1550094601138" name="silence" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="23" y="366">
+<exit_states>
+<exit_state name="done" target="Element@1257778287:1550094675318"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1699282894:1550094605508" name="get_2fa_status" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="124" x="283" y="281">
+<exit_states>
+<exit_state name="done" target="Element@2032766383:1548258382006"/>
+<exit_state name="Java Exception-any" target="Element@1043962327:1550094601138"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1257778287:1550094675318" name="counter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="91" x="-4" y="260">
+<exit_states>
+<exit_state name="done" target="Element@1579804281:1550095580277"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1579804281:1550095580277" name="check_counter" type="Decision" width="127" x="102" y="199">
+<exit_states>
+<exit_state name="exit" target="Element@387258958:1548258382006">
+<bendpoint>
+<dim1 x="274" y="26"/>
+<dim2 x="1" y="-239"/>
+</bendpoint>
+</exit_state>
+<exit_state name="continue" target="Element@1699282894:1550094605508"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1835106464:1550095752952" name="verify" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="129" x="287" y="170">
+<exit_states>
+<exit_state name="done" target="Element@1699282894:1550094605508"/>
+<exit_state name="max_nomatch" target="Element@1699282894:1550094605508"/>
+<exit_state name="max_noinput" target="Element@1699282894:1550094605508"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1424881649:1550096265482" name="need_to_verify" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="129" x="284" y="14">
+<exit_states>
+<exit_state name="done" target="Element@2048708162:1548258382006"/>
+<exit_state name="max_nomatch" target="Element@2048708162:1548258382006"/>
+<exit_state name="max_noinput" target="Element@2048708162:1548258382006"/>
+</exit_states>
+</element>
+<element height="46" id="Element@383072030:1550857320743" name="Fraud" type="Page Connector" width="82" x="798" y="439">
+<page_connector target="Element@2012487123:1550857292446">Fraud<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@626947300:1550857344883" name="return normal" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="186" y="553">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

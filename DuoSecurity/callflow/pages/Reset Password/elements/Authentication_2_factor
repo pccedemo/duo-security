@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2048708162:1548258382006" name="Authentication_2_factor" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/duo/auth</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters">'username':'{Data.Session.username}','async':'true','cvp':'true'</setting>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="body"/>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<session_data>
+<data create_when="After" name="txid">{Data.Element.Authentication_2_factor.response_body}</data>
+</session_data>
+</config>
+</action_element>

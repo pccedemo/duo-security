@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@435590462:1550863644457" name="Welcome" version="6.0.1">
+<element height="46" id="Element@197142211:1550863644457" name="Welcome" type="Page Entry" width="100" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@236743613:1550863655816"/>
+</exit_states>
+</element>
+<element height="50" id="Element@453208680:1550863655816" name="Hotlink_01" type="Hotlink" width="120" x="467" y="236">
+<exit_states>
+<exit_state name="goto" target="Element@1810189447:1550863655816"/>
+</exit_states>
+</element>
+<element height="50" id="Element@1810189447:1550863655816" name="Main Menu" type="Page Connector" width="111" x="288" y="240">
+<page_connector target="Element@66745531:1507918596202">Main Menu<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@236743613:1550863655816" name="hello" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="283" y="143">
+<exit_states>
+<exit_state name="done" target="Element@1810189447:1550863655816"/>
+</exit_states>
+</element>
+</page>

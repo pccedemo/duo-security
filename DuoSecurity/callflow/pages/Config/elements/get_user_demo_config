@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1127321419:1550863299533" name="get_user_demo_config" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="response_body">{Data.Element.get_user_demo_config.response_body}</data>
+<data create_when="After" name="response_code">{Data.Element.get_user_demo_config.status_code}</data>
+<data create_when="After" name="message">{Data.Element.get_user_demo_config.smsDeflectionMessage}</data>
+</log>
+<settings>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/configure</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters">'userId':'{Data.Session.userId}'</setting>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression">$.configuration</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<session_data>
+<data create_when="After" name="smsNumber">{Data.Element.get_user_demo_config.duoFraudSmsNumber}</data>
+<data create_when="After" name="vertical">{Data.Element.get_user_demo_config.vertical}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>
