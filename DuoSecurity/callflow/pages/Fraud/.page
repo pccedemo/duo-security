@@ -2,16 +2,16 @@
 <page id="Page@318147158:1550857292446" name="Fraud" version="6.0.1">
 <element height="46" id="Element@2012487123:1550857292446" name="Fraud" type="Page Entry" width="82" x="111" y="50">
 <exit_states>
-<exit_state name="next" target="Element@675683103:1550857308540"/>
+<exit_state name="next" target="Element@1077831434:1554507679648"/>
 </exit_states>
 </element>
-<element height="46" id="Element@675683103:1550857308540" name="send sms" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="143" x="76" y="179">
+<element height="46" id="Element@675683103:1550857308540" name="send sms" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="143" x="76" y="210">
 <exit_states>
 <exit_state name="done" target="Element@312386785:1550857308540"/>
 <exit_state name="Java Exception-any" target="Element@176568697:1550857334352">
 <bendpoint>
-<dim1 x="156" y="157"/>
-<dim2 x="191" y="-106"/>
+<dim1 x="190" y="53"/>
+<dim2 x="179" y="-55"/>
 </bendpoint>
 </exit_state>
 </exit_states>
@@ -44,5 +44,10 @@ customer's registered SMS number (session var)
 and then play a message to the hax0r. we also register 
 the SMS number in answers database on mm to assist
 routing SMS replies from the customer back to this instance.]]></comment>
+</element>
+<element height="46" id="Element@1077831434:1554507679648" name="make request body" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="213" x="14" y="129">
+<exit_states>
+<exit_state name="done" target="Element@675683103:1550857308540"/>
+</exit_states>
 </element>
 </page>

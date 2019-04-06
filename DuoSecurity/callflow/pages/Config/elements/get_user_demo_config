@@ -4,7 +4,9 @@
 <log>
 <data create_when="After" name="response_body">{Data.Element.get_user_demo_config.response_body}</data>
 <data create_when="After" name="response_code">{Data.Element.get_user_demo_config.status_code}</data>
-<data create_when="After" name="message">{Data.Element.get_user_demo_config.smsDeflectionMessage}</data>
+<data create_when="After" name="vertical">{Data.Element.get_user_demo_config.vertical}</data>
+<data create_when="After" name="duoFraudSmsNumber">{Data.Element.get_user_demo_config.duoFraudSmsNumber}</data>
+<data create_when="After" name="smsNumber">{Data.Session.smsNumber}</data>
 </log>
 <settings>
 <setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/configure</setting>

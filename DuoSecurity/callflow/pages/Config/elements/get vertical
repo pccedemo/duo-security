@@ -7,9 +7,9 @@
 <data create_when="After" name="message">{Data.Element.get_user_demo_config.smsDeflectionMessage}</data>
 </log>
 <settings>
-<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/verticals/{Data.Session.vertical}</setting>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/verticals</setting>
 <setting name="HTTPMethod">GET</setting>
-<setting name="Parameters"/>
+<setting name="Parameters">'id':'{Data.Session.vertical}'</setting>
 <setting name="ignoreCertificateValidation">true</setting>
 <setting name="requireHttpAuthentication">false</setting>
 <setting name="headers"/>
@@ -20,7 +20,6 @@
 </settings>
 <session_data>
 <data create_when="After" name="smsMessage">{Data.Element.get vertical.duoFraudSmsMessage}</data>
-<data create_when="After" name="smsNumber">{Data.Element.get vertical.duoFraudSmsNumber}</data>
 <data create_when="After" name="welcomeMessage">{Data.Element.get vertical.duoWelcomeMessage}</data>
 </session_data>
 <local_events>

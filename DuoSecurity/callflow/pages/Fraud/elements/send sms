@@ -8,11 +8,11 @@
 <settings>
 <setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/sms</setting>
 <setting name="HTTPMethod">POST</setting>
-<setting name="Parameters">'to':'{Data.Session.smsNumber}','body':'{Data.Session.smsMessage}'</setting>
+<setting name="Parameters"/>
 <setting name="ignoreCertificateValidation">true</setting>
 <setting name="requireHttpAuthentication">false</setting>
-<setting name="headers"/>
-<setting name="body"/>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{LocalVar.requestBody}</setting>
 <setting name="useProxy">false</setting>
 <setting name="connectTimeout">3000</setting>
 <setting name="readTimeout">5000</setting>

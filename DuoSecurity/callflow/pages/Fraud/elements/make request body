@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1077831434:1554507679648" name="make request body" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="requestBody">{LocalVar.requestBody}</data>
+</log>
+<settings>
+<setting name="requestBody">JSON.stringify({
+	to: {Data.Session.smsNumber},
+       body: {Data.Session.smsMessage}
+})</setting>
+</settings>
+</config>
+</action_element>
